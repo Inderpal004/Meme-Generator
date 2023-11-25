@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meme-generator {
+  text-align: center;
+}
+
+.meme-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #202020;
+  text-transform: uppercase;
+  word-spacing: 2px;
+  letter-spacing: 0.7px;
+  margin-bottom: 15px;
+}
+
+.meme-generator img {
+  height: 350px;
+  object-fit: cover;
+}
+
+.meme-author {
+  margin: 8px;
+}
+
+.generate-meme-btn {
+  background-color: #3dd1e7;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 0px auto 20px;
+  display: block;
+}
+
+.generate-meme-btn:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.generate-meme-btn:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+.meme-author-div h1 {
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.meme-author-div h1 span {
+  margin-top: 15px;
+  font-size: 18px;
+  word-spacing: 1px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.meme-author-div h1 span:after,
+.meme-author-div h1 span:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  height: 5px;
+  background-color: #f8f8f8;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: auto 7%;
+  }
+
+  .meme-generator img {
+    height: 350px;
+    object-fit: contain;
+    max-width: 80%;
+    max-width: 80%;
+  }
+
+  .meme-title {
+    font-size: 15px;
+  }
+
+  .meme-author-div h1 span {
+    font-size: 15px;
+  }
+}
